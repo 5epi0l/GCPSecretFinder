@@ -8,8 +8,6 @@ A Python tool for scanning Google Cloud Platform Secret Manager across all regio
 - Multiple authentication methods (access token, token file, or service account key)
 - Optional secret value retrieval
 - Export results to JSON
-- Beautiful terminal UI with progress tracking
-- Quiet mode for script integration
 
 ## Installation
 ```bash
