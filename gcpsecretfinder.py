@@ -160,6 +160,7 @@ def main():
     
     if total_secrets == 0:
         print("[!] No Secrets Found")
-
+    else:
+        print("[*] Total Secrets Retrieved: ", total_secrets)
 if __name__ == "__main__":
     main()
