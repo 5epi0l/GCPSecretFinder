@@ -46,13 +46,6 @@ def scanRegionsForSecrets(project: str, region: str, access_token: str) -> Optio
         print(f"[!] An error has occured: {e}", file=sys.stderr)
 
 def retrieveFoundSecrets(secret_name: str, access_token: str, version: str = "latest") -> Optional[Tuple[str, bool]]:
-    """
-    Args:
-        secret_name: Full secret name
-        access_token: GCP access Token
-        Version: Version to retrieve (default: "latest")
-    """
-
     region = secret_name.split('/')[3]
     project_num = secret_name.split('/')[1]
     secret = secret_name.split('/')[5]
@@ -153,8 +146,8 @@ def main():
             total_secrets += len(secrets)
 
     if args.retrieve:
-        print("[*] Retrieving Value")
         if all_secrets:
+            print("[*] Retrieving Value")
             for s in all_secrets:
                 print(f"\n{s}")
     
